@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー | Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        #language-switch {
+            margin-bottom: 20px;
+        }
+        .policy {
+            display: none;
+        }
+        .policy.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.policy').forEach(policy => {
+                policy.classList.remove('active');
+            });
+            document.getElementById(`policy-${lang}`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div id="language-switch">
+        <button onclick="switchLanguage('ja')">日本語</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <!-- 日本語版プライバシーポリシー -->
+    <div id="policy-ja" class="policy active">
+        <h1>プライバシーポリシー</h1>
+        <p>本アプリは、ユーザーの個人データを保護し、プライバシーを尊重します。</p>
+
+        <h2>1. 収集するデータ</h2>
+        <p>本アプリは、アプリ内での操作に必要なデータをローカルに保存します（例: 設定情報や作成したファイル）。このデータは、ユーザーのデバイス上にのみ保存されます。</p>
+
+        <h2>2. データの使用目的</h2>
+        <p>収集したデータは、アプリの機能を提供するためにのみ使用されます。</p>
+
+        <h2>3. 第三者との共有</h2>
+        <p>本アプリは、ユーザーのデータを第三者と共有しません。</p>
+
+        <h2>4. データ管理</h2>
+        <p>ユーザーはいつでも保存されたデータを削除できます。</p>
+
+        <h2>5. お問い合わせ</h2>
+        <p>本プライバシーポリシーに関する質問は、次のメールアドレスまでご連絡ください: <a href="mailto:k.okano.chemitech@gmail.com">k.okano.chemitech@gmail.com</a></p>
+    </div>
+
+    <!-- 英語版プライバシーポリシー -->
+    <div id="policy-en" class="policy">
+        <h1>Privacy Policy</h1>
+        <p>This application respects user privacy and protects personal data.</p>
+
+        <h2>1. Data Collection</h2>
+        <p>This application stores data locally on the user's device (e.g., settings information and created files). This data is stored only on the user's device.</p>
+
+        <h2>2. Purpose of Data Use</h2>
+        <p>The collected data is used solely to provide the functionality of the application.</p>
+
+        <h2>3. Data Sharing</h2>
+        <p>This application does not share user data with third parties.</p>
+
+        <h2>4. Data Management</h2>
+        <p>Users can delete stored data at any time.</p>
+
+        <h2>5. Contact</h2>
+        <p>For questions regarding this privacy policy, please contact us at: <a href="mailto:k.okano.chemitech@gmail.com">k.okano.chemitech@gmail.com</a></p>
+    </div>
+</body>
+</html>
